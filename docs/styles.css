@@ -77,6 +77,29 @@
     text-decoration: underline; /* Underline effect on hover */
 }
 
+@media (max-width: 600px) {
+    .navigation {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center items horizontally */
+        padding: 0; /* Optional: adjust padding as preferred */
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: column; /* Change to column layout */
+        align-items: center; /* Center align for mobile */
+        padding: 0; /* Remove any padding */
+        margin: 0; /* Remove any margin */
+        width: 100%; /* Ensure full width */
+    }
+
+    .navigation li {
+        margin: 10px 0; /* Adjust space between menu items */
+        width: 100%; /* Allow each item to take full width */
+        text-align: center; /* Center align text */
+    }
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap into the next row */
