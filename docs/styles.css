@@ -77,6 +77,35 @@
     text-decoration: underline; /* Underline effect on hover */
 }
 
+.grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap into the next row */
+    justify-content: center; /* Center the grid */
+    width: 100%; /* Full width of the container */
+}
+
+.grid-block {
+    flex: 0 0 calc(50% - 20px); /* Take up half the container's width, minus margin */
+    margin: 10px; /* Space between blocks */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.tile-img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+    transition: box-shadow 0.2s ease-in-out; /* Smooth shadow transition */
+}
+
+.tile-link {
+    display: block; /* Allow the link to take up the entire area */
+}
+
+/* Example hover effect for image */
+.tile-link:hover .tile-img {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Add shadow on hover */
+}
+
 .body-top {
     display: flex; /* Enables flexbox layout */
     justify-content: center; /* Center the content */
