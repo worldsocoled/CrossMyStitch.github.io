@@ -38,66 +38,106 @@ body {
 }
 
 .search-input {
-  
-  .tile-link {
-    display: block;
-  }
-  
-  .tile-link:hover .tile-img {
-    opacity: 1;
-  }
-  
-  .tile-link:hover .tile-img-link {
-    display: block;
-  }
-  
-  .tile-link:hover .tile-img-link:hover .tile-img {
-    opacity: 0.5;
-  }
-  
-  .tile-img {
-    display: block;
-    width: 100%;
-    height: auto;
-    opacity: 1;
-    -webkit-transition-property: opacity;
-    transition-property: opacity;
-    -webkit-transition-duration: 0.125s;
-    transition-duration: 0.125s;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-  }
-  .tile-link:hover .tile-img1 {
-    box-shadow: 5px 5px rgba(244, 170, 200, 0.4),
-      10px 10px rgba(244, 170, 200, 0.3), 15px 15px rgba(244, 170, 200, 0.2),
-      20px 20px rgba(244, 170, 200, 0.1), 25px 25px rgba(244, 170, 200, 0.05);
-  }
-  
-  .tile-link:hover .tile-img2 {
-    box-shadow: 5px 5px rgba(45, 186, 233, 0.4), 10px 10px rgba(45, 186, 233, 0.3),
-      15px 15px rgba(45, 186, 233, 0.2), 20px 20px rgba(45, 186, 233, 0.1),
-      25px 25px rgba(45, 186, 233, 0.05);
-  }
-  
-  .tile-link:hover .tile-img3 {
-    box-shadow: 5px 5px rgba(214, 221, 244, 0.4),
-      10px 10px rgba(214, 221, 244, 0.3), 15px 15px rgba(214, 221, 244, 0.2),
-      20px 20px rgba(214, 221, 244, 0.1), 25px 25px rgba(214, 221, 244, 0.05);
-  }
-  
-  .tile-link:hover .tile-img4 {
-    box-shadow: 5px 5px rgba(82, 119, 192, 0.4), 10px 10px rgba(82, 119, 192, 0.3),
-      15px 15px rgba(82, 119, 192, 0.2), 20px 20px rgba(82, 119, 192, 0.1),
-      25px 25px rgba(82, 119, 192, 0.05);
-  }
-  
-  
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px solid rgba(250, 147, 182, 1);
+    width: 100%; /* Full width for responsiveness */
+    max-width: 300px; /* Limit maximum width */
+    margin: 10px auto; /* Center input */
+    box-sizing: border-box; /* Include padding and border in width */
+}
 
-  /*footer*/
-  .footer {
-    text-align: center;     /* Center align the text */
+.navigation-section {
+    background-color: var(--tertiary-background-color);
+    color: #fff;
+    padding: var(--spacing-top-small) var(--padding-horizontal);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column; /* Stack on small screens */
+    align-items: center; /* Center navigation items */
+}
+
+.navigation ul {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    margin: 5px; /* Reduce space between menu items */
+}
+
+.navigation a {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+.body-container {
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stack columns on small screens */
+    align-items: center; /* Center align items */
+    gap: 20px; /* Space between columns */
+    margin-top: 20px; /* Margin on top of columns */
+}
+
+.column {
+    flex: 1; /* Each column takes equal width */
+    padding: 20px; /* Padding around content */
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of grid items */
+    justify-content: center; /* Center the grid */
+    width: 100%;
+}
+
+.grid-block {
+    flex: 1 1 45%; /* Allow blocks to grow and shrink */
+    max-width: 220px; /* Limit maximum width for each image block */
+    margin: 5px; /* Add some margin for space between blocks */
+}
+
+.tile-img {
+    display: block;
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+    transition: box-shadow 0.2s ease-in-out; /* Smooth shadow transition */
+}
+
+.tile-link:hover .tile-img {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Add shadow on hover */
+}
+
+/* Footer styles */
+.footer {
+    text-align: center; /* Center align the text */
     color: black; /* Set the text color */
     font-weight: bolder;
-    font-size: 14px;        /* Set font size */
-    border-top: 1px solid #ccc; /* Optional: a top border for separation */
-  }
+    font-size: 14px; /* Set font size */
+    border-top: 1px solid #ccc; /* Top border for separation */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .navigation {
+        flex-direction: column; /* Stack navigation items */
+    }
+
+    .body-container {
+        flex-direction: column; /* Stack the columns */
+    }
