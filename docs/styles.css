@@ -81,7 +81,6 @@
     .navigation {
         flex-direction: column; /* Stack navigation items vertically */
         align-items: center; /* Center items horizontally */
-        padding: 0; /* Optional: adjust padding as preferred */
     }
 
     .navigation ul {
