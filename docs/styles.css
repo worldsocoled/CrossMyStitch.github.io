@@ -1,11 +1,7 @@
-body {
-    cursor: url('mouse.png'), auto; /* Custom pink cursor for the entire page */
-}
-
 :root {
     --spacing-top-small: 20px;
     --spacing-top-large: 30px;
-    --padding-horizontal: 5%; /* Reduced padding for responsiveness */
+    --padding-horizontal: 50px;
     --tertiary-background-color: black; /* Tertiary background color */
     --text-color: #fff; /* Background text color */
 }
@@ -24,7 +20,7 @@ body {
 
 .inner-header {
     display: flex;
-    flex-direction: column; /* Stack logo and search bar */
+    flex-direction: column; /* Changes to column to stack logo and search bar */
     align-items: center; /* Center items horizontally */
 }
 
@@ -34,14 +30,14 @@ body {
 }
 
 .search-column {
-    flex: 1; /* Space filling */
+    flex: 1; /* 33.33% */
 }
 
 .search-input {
     padding: 10px;
     border-radius: 50px;
     border: 2px solid rgba(250, 147, 182, 1);
-    width: 100%; /* Full width for responsiveness */
+    width: 100%; /* Adjusted for responsiveness */
     max-width: 300px; /* Limit maximum width */
     margin: 10px auto; /* Center input */
     box-sizing: border-box; /* Include padding and border in width */
@@ -55,21 +51,18 @@ body {
 
 .navigation {
     display: flex;
-    flex-direction: column; /* Stack on small screens */
-    align-items: center; /* Center navigation items */
+    justify-content: space-between;
 }
 
 .navigation ul {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap */
-    justify-content: center; /* Center items */
     list-style: none;
     padding: 0;
+    display: flex;
     margin: 0;
 }
 
 .navigation li {
-    margin: 5px; /* Reduce space between menu items */
+    margin: 0 20px; /* Space between menu items */
 }
 
 .navigation a {
@@ -84,12 +77,22 @@ body {
     text-decoration: underline; /* Underline effect on hover */
 }
 
+.body-top {
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Align items vertically in the center, if needed */
+    overflow: hidden; /* Ensures content respects the border radius */
+    margin-top: 25px; /* Add margin on top of the column */
+    margin-bottom: 20px; /* Add margin on bottom of the column */
+    width: 100%; /* Ensure full width, or adjust as necessary */
+}
+
 .body-container {
     display: flex; /* Enables flexbox layout */
-    flex-direction: column; /* Stack columns on small screens */
-    align-items: center; /* Center align items */
+    justify-content: space-between; /* Space between columns */
     gap: 20px; /* Space between columns */
-    margin-top: 20px; /* Margin on top of columns */
+    overflow: hidden; /* Ensures content respects the border radius */
+    margin-top: 20px; /* Add margin on top of the columns */
 }
 
 .column {
@@ -98,46 +101,17 @@ body {
     box-sizing: border-box; /* Ensures padding is included in width */
 }
 
-.grid {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping of grid items */
-    justify-content: center; /* Center the grid */
-    width: 100%;
-}
-
-.grid-block {
-    flex: 1 1 45%; /* Allow blocks to grow and shrink */
-    max-width: 220px; /* Limit maximum width for each image block */
-    margin: 5px; /* Add some margin for space between blocks */
-}
-
-.tile-img {
-    display: block;
-    width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
+.column-top {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 13%, rgba(255, 228, 248, 1) 43%, rgba(253, 201, 227, 1) 77%, rgba(244, 74, 131, 1) 100%);
+    border: 2px solid white; /* Border around the container */
     border-radius: 15px; /* Rounded corners */
-    transition: box-shadow 0.2s ease-in-out; /* Smooth shadow transition */
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 3px #f33886;
 }
 
-.tile-link:hover .tile-img {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Add shadow on hover */
-}
-
-/* Footer styles */
-.footer {
-    text-align: center; /* Center align the text */
-    color: black; /* Set the text color */
-    font-weight: bolder;
-    font-size: 14px; /* Set font size */
-    border-top: 1px solid #ccc; /* Top border for separation */
-}
-
-/* Responsive styles */
-@media (max-width: 600px) {
-    .navigation {
-        flex-direction: column; /* Stack navigation items */
-    }
-
-    .body-container {
-        flex-direction: column; /* Stack the columns */
-    }
+.column-left, .column-right {
+    background: rgb(254, 179, 243);
+    background: linear-gradient(90deg, rgba(254, 179, 243, 1) 0%, rgba(224, 179, 254, 1) 50%, rgba(179, 254, 242, 1) 100%);
+    border
